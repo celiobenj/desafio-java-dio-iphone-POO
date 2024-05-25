@@ -7,9 +7,10 @@ Também me senti confiante e tomei a iniciativa de implementar minha diagramaç�
 ### Diagrama UML feito em [Mermaid](https://mermaid.js.org/)
 ```mermaid
 classDiagram
-    ReprodutorMusical <|-- Iphone
-    AparelhoTelefonico <|-- Iphone
-    NavegadorInternet <|-- Iphone
+    ReprodutorMusical <|-- iPhone
+    AparelhoTelefonico <|-- iPhone
+    NavegadorInternet <|-- iPhone
+    iPhone <|-- User
 
     class ReprodutorMusical{
         <<interface>>
@@ -19,15 +20,18 @@ classDiagram
     }
 
     class AparelhoTelefonico{
-      <<interface>>  
-      +atender() void
-      +iniciarCorreioVoz() void
-      +ligar(String numero) void
+        <<interface>>  
+        +atender() void
+        +iniciarCorreioVoz() void
+        +ligar(String numero) void
     }
     class NavegadorInternet{
-      <<interface>>
-      +exibirPagina(String url) void
-      +adicionarNovaAba() void
-      +atualizarPagina() void
+        <<interface>>
+        +exibirPagina(String url) void
+        +adicionarNovaAba() void
+        +atualizarPagina() void
+    }
+    class iPhone{
+        +String nomeUsuário;
     }
 ```

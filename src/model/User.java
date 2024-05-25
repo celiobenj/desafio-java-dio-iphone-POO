@@ -10,13 +10,12 @@ public class User {
 
         iPhone iphone = new iPhone();
 
-        int opção = -1;
-
         System.out.println("\nOlá, seja muito bem-vindo(a), vamos começar com seu novo iPhone!\n");
         System.out.println("Primeiramente, qual é o seu nome? ");
         iphone.setNomeUsuário(scanner.next());
         System.out.println("\nOlá " + iphone.getNomeUsuário() + " é um prazer te conhecer\n");
 
+        int opção = -1;
         do {
             System.out.println("O que você gostaria de fazer?");
             System.out.println("1: Acessar Aparelho Telefônico");
